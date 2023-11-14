@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+	width: 0.01px;
+	height: 0.01px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+body {
+  text-rendering: optimizelegibility;
+}
+
+.router-link {
+  @apply flex items-center px-4 py-2 border rounded-md bg-blue-900 hover:bg-blue-700 text-neutral-100 transition font-bold ml-3 duration-500;
+}
+
+.router-link-active {
+  @apply bg-rose-500 hover:bg-rose-500;
+}
+
+h1 {
+	@apply uppercase mb-5 font-bold text-4xl;
+}
+
+h3 {
+	@apply font-bold text-xl mb-2;
+}
+
+a {
+	@apply hover:underline hover:decoration-dashed decoration-current underline-offset-4 rounded-none duration-500 transition-all font-bold text-sm uppercase;
+}
+
+.page {
+	@apply flex flex-col pt-[80px] h-screen w-full;
+}
+
+.triangle {
+	@apply w-0 h-0 border;
+}
+
+.triangle-top {
+	@apply border-t-primary border-r-transparent border-b-transparent border-l-transparent;
+		
+	border-width: 80px 100vw 0 0;
+}
+
+.triangle-bottom {
+	@apply border-t-transparent border-r-transparent border-b-primary border-l-transparent;
+		
+	border-width: 0 100vw 80px 0;
+}
